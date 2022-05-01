@@ -1,0 +1,13 @@
+{
+    "welcome" : "Welcome",
+    "sign_in_to_continue" : "Sign in to Continue",
+    "sign_in" : "Sign in",
+    "don_t_you_have_an_account" : "Don't you have an account?",
+    "create" : "Create",
+    "or_sign_up_with" : "Or sign up with",
+    "login" : "Login",
+    "password" : "Password",
+    "login_validator_message_1" : "The login cannot be empty",
+    "login_validator_message_2" : "A user with this username already exists",
+    "password_validator_message_1" : "The password cannot be empty"
+ }

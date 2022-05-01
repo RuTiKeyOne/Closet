@@ -1,0 +1,39 @@
+name: closet
+description: A closet flutter project.
+
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.15.1 <3.0.0"
+
+dependencies:
+  adaptive_theme: ^2.3.0
+  bloc: ^8.0.3
+  cupertino_icons: ^1.0.2
+  equatable: ^2.0.3
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.0.1
+  flutter_localizations:
+    sdk: flutter
+  flutter_svg: ^1.0.3
+  font_awesome_flutter: ^9.2.0
+  get_it: ^7.2.0
+  intl: ^0.17.0
+  provider: ^6.0.2
+  sqflite: ^2.0.2
+
+dev_dependencies:
+  flutter_lints: ^1.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/icons/
+    - assets/images/
+
+flutter_intl:
+  enabled: true
