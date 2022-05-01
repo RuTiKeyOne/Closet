@@ -9,7 +9,13 @@
     "password" : "Пароль",
     "login_validator_message_1" : "Логин не может быть пустым",
     "login_validator_message_2" : "Пользователь с таким логином уже существует",
-    "password_validator_message_1" : "Пароль не может быть пустым"
+    "password_validator_message_1" : "Пароль не может быть пустым",
+    "back" : "Назад",
+    "sign_up" : "Регистрация",
+    "create_an_account" : "Создать учетную запись"
+
+
+
  
 
 

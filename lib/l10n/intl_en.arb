@@ -9,5 +9,8 @@
     "password" : "Password",
     "login_validator_message_1" : "The login cannot be empty",
     "login_validator_message_2" : "A user with this username already exists",
-    "password_validator_message_1" : "The password cannot be empty"
+    "password_validator_message_1" : "The password cannot be empty",
+    "back" : "Back",
+    "sign_up" : "Sign Up",
+    "create_an_account" : "Create an account"
  }

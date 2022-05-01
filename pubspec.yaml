@@ -32,8 +32,8 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/icons/
-    - assets/images/
+    - assets/icons/gosuslugi.png
+ 
 
 flutter_intl:
   enabled: true
