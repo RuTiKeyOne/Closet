@@ -75,7 +75,7 @@ class RegistrationView extends StatelessWidget {
                 height: 45,
                 width: MediaQuery.of(context).size.width,
                 child: ElevatedButtonTypeOne(
-                  onPressed: () => model.createAccount(),
+                  onPressed: () => model.createAccount(context),
                   title: S.of(context).create,
                 ),
               ),

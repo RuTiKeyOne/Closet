@@ -1,4 +1,8 @@
+import 'package:closet/core/domain/model/user.dart';
+import 'package:closet/core/internal/db_di/db_controller.dart';
+import 'package:closet/core/internal/locator.dart';
 import 'package:closet/generated/l10n.dart';
+import 'package:closet/presentation/navigation/route.dart';
 import 'package:flutter/cupertino.dart';
 
 class AuthorizationModel extends ChangeNotifier {
@@ -36,6 +40,7 @@ class AuthorizationModel extends ChangeNotifier {
     if (val == null || val.isEmpty) {
       return S.of(context).login_validator_message_1;
     }
+
     return null;
   }
 
@@ -46,7 +51,14 @@ class AuthorizationModel extends ChangeNotifier {
     return null;
   }
 
-  void signIn() {
-    if (signInFormState.currentState!.validate()) {}
+  void signIn(BuildContext context) async {
+    if (signInFormState.currentState!.validate()) {
+      final users = await getIt.get<DbController>().getUsers();
+      final User? user = users.firstWhere((element) =>
+          element.login == _login && element.password == _password);
+      if (user != null) {
+        Navigator.of(context).pushNamed(getIt.get<Main>().route);
+      }
+    }
   }
 }

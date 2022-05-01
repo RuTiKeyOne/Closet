@@ -21,6 +21,7 @@ dependencies:
   font_awesome_flutter: ^9.2.0
   get_it: ^7.2.0
   intl: ^0.17.0
+  path_provider: ^2.0.9
   provider: ^6.0.2
   sqflite: ^2.0.2
 
@@ -33,7 +34,6 @@ flutter:
   uses-material-design: true
   assets:
     - assets/icons/gosuslugi.png
- 
 
 flutter_intl:
   enabled: true

@@ -74,7 +74,7 @@ class AuthorizationView extends StatelessWidget {
                 height: 45,
                 width: MediaQuery.of(context).size.width,
                 child: ElevatedButtonTypeOne(
-                  onPressed: () => model.signIn(),
+                  onPressed: () async => model.signIn(context),
                   title: S.of(context).sign_in,
                 ),
               ),

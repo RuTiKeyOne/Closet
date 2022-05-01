@@ -11,3 +11,7 @@ class Authorization extends Route {
 class Registration extends Route {
   Registration() : super("Registration");
 }
+
+class Main extends Route {
+  Main() : super("Main");
+}

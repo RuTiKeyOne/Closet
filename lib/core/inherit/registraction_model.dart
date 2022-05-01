@@ -1,3 +1,6 @@
+import 'package:closet/core/domain/model/user.dart';
+import 'package:closet/core/internal/db_di/db_controller.dart';
+import 'package:closet/core/internal/locator.dart';
 import 'package:closet/generated/l10n.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -46,7 +49,11 @@ class RegistrationModel extends ChangeNotifier {
     return null;
   }
 
-  void createAccount() {
-    if (registrationFormState.currentState!.validate()) {}
+  void createAccount(BuildContext context) async {
+    if (registrationFormState.currentState!.validate()) {
+      final User user = User(login: _login, password: password);
+      await getIt.get<DbController>().add(user);
+      Navigator.pop(context);
+    }
   }
 }

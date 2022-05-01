@@ -2,6 +2,7 @@ import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:closet/core/internal/locator.dart';
 import 'package:closet/generated/l10n.dart';
 import 'package:closet/presentation/authorization/authorization_screen.dart';
+import 'package:closet/presentation/main/main_screen.dart';
 import 'package:closet/presentation/navigation/route.dart';
 import 'package:closet/presentation/registration/registration_screen.dart';
 import 'package:flutter/material.dart';
@@ -42,6 +43,7 @@ class MyApp extends StatelessWidget {
                 const AuthorizationScreen(),
             getIt.get<Registration>().route: (context) =>
                 const RegistrationScreen(),
+            getIt.get<Main>().route: (context) => const MainScreen(),
           },
         );
       },
