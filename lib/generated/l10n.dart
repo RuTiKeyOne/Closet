@@ -130,30 +130,30 @@ class S {
     );
   }
 
-  /// `The login cannot be empty`
+  /// `The login cannot be empty.`
   String get login_validator_message_1 {
     return Intl.message(
-      'The login cannot be empty',
+      'The login cannot be empty.',
       name: 'login_validator_message_1',
       desc: '',
       args: [],
     );
   }
 
-  /// `A user with this username already exists`
+  /// `A user with this username already exists.`
   String get login_validator_message_2 {
     return Intl.message(
-      'A user with this username already exists',
+      'A user with this username already exists.',
       name: 'login_validator_message_2',
       desc: '',
       args: [],
     );
   }
 
-  /// `The password cannot be empty`
+  /// `The password cannot be empty.`
   String get password_validator_message_1 {
     return Intl.message(
-      'The password cannot be empty',
+      'The password cannot be empty.',
       name: 'password_validator_message_1',
       desc: '',
       args: [],
@@ -185,6 +185,26 @@ class S {
     return Intl.message(
       'Create an account',
       name: 'create_an_account',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login or password is incorrect.`
+  String get login_or_password_is_incorrect {
+    return Intl.message(
+      'Login or password is incorrect.',
+      name: 'login_or_password_is_incorrect',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `A user with this login already exists.`
+  String get login_validator_message_3 {
+    return Intl.message(
+      'A user with this login already exists.',
+      name: 'login_validator_message_3',
       desc: '',
       args: [],
     );

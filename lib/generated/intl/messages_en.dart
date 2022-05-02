@@ -29,15 +29,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "don_t_you_have_an_account":
             MessageLookupByLibrary.simpleMessage("Don\'t you have an account?"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
+        "login_or_password_is_incorrect": MessageLookupByLibrary.simpleMessage(
+            "Login or password is incorrect."),
         "login_validator_message_1":
-            MessageLookupByLibrary.simpleMessage("The login cannot be empty"),
+            MessageLookupByLibrary.simpleMessage("The login cannot be empty."),
         "login_validator_message_2": MessageLookupByLibrary.simpleMessage(
-            "A user with this username already exists"),
+            "A user with this username already exists."),
+        "login_validator_message_3": MessageLookupByLibrary.simpleMessage(
+            "A user with this login already exists."),
         "or_sign_up_with":
             MessageLookupByLibrary.simpleMessage("Or sign up with"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "password_validator_message_1": MessageLookupByLibrary.simpleMessage(
-            "The password cannot be empty"),
+            "The password cannot be empty."),
         "sign_in": MessageLookupByLibrary.simpleMessage("Sign in"),
         "sign_in_to_continue":
             MessageLookupByLibrary.simpleMessage("Sign in to Continue"),

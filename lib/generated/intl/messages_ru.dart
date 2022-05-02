@@ -29,15 +29,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "don_t_you_have_an_account":
             MessageLookupByLibrary.simpleMessage("У вас нет аккаунта?"),
         "login": MessageLookupByLibrary.simpleMessage("Логин"),
+        "login_or_password_is_incorrect":
+            MessageLookupByLibrary.simpleMessage("Логин или пароль неверны."),
         "login_validator_message_1":
-            MessageLookupByLibrary.simpleMessage("Логин не может быть пустым"),
+            MessageLookupByLibrary.simpleMessage("Логин не может быть пустым."),
         "login_validator_message_2": MessageLookupByLibrary.simpleMessage(
-            "Пользователь с таким логином уже существует"),
+            "Пользователь с таким логином уже существует."),
+        "login_validator_message_3": MessageLookupByLibrary.simpleMessage(
+            "Пользователь с таким логином уже существует."),
         "or_sign_up_with":
             MessageLookupByLibrary.simpleMessage("Или войдите с помощью"),
         "password": MessageLookupByLibrary.simpleMessage("Пароль"),
-        "password_validator_message_1":
-            MessageLookupByLibrary.simpleMessage("Пароль не может быть пустым"),
+        "password_validator_message_1": MessageLookupByLibrary.simpleMessage(
+            "Пароль не может быть пустым."),
         "sign_in": MessageLookupByLibrary.simpleMessage("Войти"),
         "sign_in_to_continue":
             MessageLookupByLibrary.simpleMessage("Войдите чтобы продолжить"),

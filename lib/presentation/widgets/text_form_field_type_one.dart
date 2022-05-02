@@ -7,10 +7,14 @@ class TextFormFieldTypeOne extends StatelessWidget {
   final String? Function(String?)? validator;
   final String hintText;
   final bool? obscureText;
+  final bool? autofocus;
+  final void Function(String)? onFieldSubmitted;
   const TextFormFieldTypeOne({
     Key? key,
     this.obscureText,
     this.controller,
+    this.autofocus,
+    this.onFieldSubmitted,
     required this.onTextChanged,
     required this.validator,
     required this.hintText,
@@ -20,6 +24,8 @@ class TextFormFieldTypeOne extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      onFieldSubmitted: onFieldSubmitted,
+      autofocus: autofocus ?? false,
       obscureText: obscureText ?? false,
       controller: controller,
       textInputAction: textInputAction,

@@ -1,8 +1,12 @@
+import 'package:closet/core/BLoC/cubit/authorization_cubit/authorization_cubit.dart';
+import 'package:closet/core/BLoC/cubit/registration_cubit/registration_cubit.dart';
 import 'package:closet/core/domain/model/user.dart';
 import 'package:closet/core/internal/db_di/db_controller.dart';
 import 'package:closet/core/internal/locator.dart';
 import 'package:closet/generated/l10n.dart';
+import 'package:closet/presentation/navigation/route.dart' as navigation;
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class RegistrationModel extends ChangeNotifier {
   final GlobalKey<FormState> registrationFormState;
@@ -15,7 +19,6 @@ class RegistrationModel extends ChangeNotifier {
         loginController.selection = TextSelection.fromPosition(
           TextPosition(offset: loginController.text.length),
         ),
-        registrationFormState.currentState!.validate(),
       };
 
   TextEditingController loginController;
@@ -27,7 +30,6 @@ class RegistrationModel extends ChangeNotifier {
         passwordController.text = _login,
         passwordController.selection = TextSelection.fromPosition(
             TextPosition(offset: loginController.text.length)),
-        registrationFormState.currentState!.validate(),
       };
 
   TextEditingController passwordController;
@@ -35,10 +37,18 @@ class RegistrationModel extends ChangeNotifier {
   RegistrationModel(this._login, this.loginController, this._password,
       this.passwordController, this.registrationFormState);
 
-  String? loginValidator(String? val, BuildContext context) {
+  String? loginValidator(
+      {required String? val,
+      required BuildContext context,
+      required List<User> users}) {
     if (val == null || val.isEmpty) {
       return S.of(context).login_validator_message_1;
     }
+
+    if (users.any((element) => element.login == _login)) {
+      return S.of(context).login_validator_message_3;
+    }
+
     return null;
   }
 
@@ -49,11 +59,16 @@ class RegistrationModel extends ChangeNotifier {
     return null;
   }
 
-  void createAccount(BuildContext context) async {
+  void backOnPressed(BuildContext context) {
+    Navigator.of(context).pushNamedAndRemoveUntil(
+        getIt.get<navigation.Authorization>().route,
+        (Route<dynamic> route) => false);
+  }
+
+  void createAccount(BuildContext context, List<User> users) async {
     if (registrationFormState.currentState!.validate()) {
-      final User user = User(login: _login, password: password);
-      await getIt.get<DbController>().add(user);
-      Navigator.pop(context);
+      BlocProvider.of<RegistrationCubit>(context).createAccount(
+          login: login, password: password, users: users, context: context);
     }
   }
 }

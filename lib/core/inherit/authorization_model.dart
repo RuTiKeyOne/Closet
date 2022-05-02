@@ -1,12 +1,14 @@
+import 'package:closet/core/BLoC/cubit/authorization_cubit/authorization_cubit.dart';
 import 'package:closet/core/domain/model/user.dart';
-import 'package:closet/core/internal/db_di/db_controller.dart';
 import 'package:closet/core/internal/locator.dart';
 import 'package:closet/generated/l10n.dart';
-import 'package:closet/presentation/navigation/route.dart';
+import 'package:closet/presentation/navigation/route.dart' as navigator;
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AuthorizationModel extends ChangeNotifier {
   final GlobalKey<FormState> signInFormState;
+  AutovalidateMode autoValidateMode;
 
   String _login;
   String get login => _login;
@@ -16,7 +18,6 @@ class AuthorizationModel extends ChangeNotifier {
         loginController.selection = TextSelection.fromPosition(
           TextPosition(offset: loginController.text.length),
         ),
-        signInFormState.currentState!.validate(),
       };
 
   TextEditingController loginController;
@@ -25,40 +26,58 @@ class AuthorizationModel extends ChangeNotifier {
   String get password => _login;
   set password(String val) => {
         _password = val,
-        passwordController.text = _login,
+        passwordController.text = _password,
         passwordController.selection = TextSelection.fromPosition(
-            TextPosition(offset: loginController.text.length)),
-        signInFormState.currentState!.validate(),
+            TextPosition(offset: passwordController.text.length)),
       };
 
   TextEditingController passwordController;
 
   AuthorizationModel(this._login, this.loginController, this._password,
-      this.passwordController, this.signInFormState);
+      this.passwordController, this.signInFormState, this.autoValidateMode);
 
-  String? loginValidator(String? val, BuildContext context) {
+  String? loginValidator(
+      {required String? val,
+      required BuildContext context,
+      required List<User> users}) {
     if (val == null || val.isEmpty) {
       return S.of(context).login_validator_message_1;
     }
 
+    if (!users.any((element) =>
+        element.login == _login && element.password == _password)) {
+      return S.of(context).login_or_password_is_incorrect;
+    }
+
     return null;
   }
 
-  String? passwordValidator(String? val, BuildContext context) {
+  String? passwordValidator(
+      {required String? val,
+      required BuildContext context,
+      required List<User> users}) {
     if (val == null || val.isEmpty) {
       return S.of(context).password_validator_message_1;
     }
+
+    if (!users.any((element) =>
+        element.login == _login && element.password == _password)) {
+      return S.of(context).login_or_password_is_incorrect;
+    }
+
     return null;
   }
 
-  void signIn(BuildContext context) async {
+  void createAccountOnPressed(BuildContext context) {
+    Navigator.of(context).pushNamedAndRemoveUntil(
+        getIt.get<navigator.Registration>().route,
+        (Route<dynamic> route) => false);
+  }
+
+  void signIn(BuildContext context, List<User> users) async {
     if (signInFormState.currentState!.validate()) {
-      final users = await getIt.get<DbController>().getUsers();
-      final User? user = users.firstWhere((element) =>
-          element.login == _login && element.password == _password);
-      if (user != null) {
-        Navigator.of(context).pushNamed(getIt.get<Main>().route);
-      }
+      BlocProvider.of<AuthorizationCubit>(context).signIn(
+          login: login, password: password, users: users, context: context);
     }
   }
 }

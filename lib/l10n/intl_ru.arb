@@ -7,12 +7,16 @@
     "or_sign_up_with" : "Или войдите с помощью",
     "login" : "Логин",
     "password" : "Пароль",
-    "login_validator_message_1" : "Логин не может быть пустым",
-    "login_validator_message_2" : "Пользователь с таким логином уже существует",
-    "password_validator_message_1" : "Пароль не может быть пустым",
+    "login_validator_message_1" : "Логин не может быть пустым.",
+    "login_validator_message_2" : "Пользователь с таким логином уже существует.",
+    "password_validator_message_1" : "Пароль не может быть пустым.",
     "back" : "Назад",
     "sign_up" : "Регистрация",
-    "create_an_account" : "Создать учетную запись"
+    "create_an_account" : "Создать учетную запись",
+    "login_or_password_is_incorrect" : "Логин или пароль неверны.",
+    "login_validator_message_3" : "Пользователь с таким логином уже существует."
+
+
 
 
 

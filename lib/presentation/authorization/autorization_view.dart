@@ -1,3 +1,5 @@
+import 'package:closet/core/BLoC/cubit/authorization_cubit/authorization_cubit.dart'
+    as cubit;
 import 'package:closet/core/inherit/authorization_model.dart';
 import 'package:closet/core/internal/locator.dart';
 import 'package:closet/generated/l10n.dart';
@@ -5,16 +7,19 @@ import 'package:closet/presentation/navigation/route.dart';
 import 'package:closet/presentation/widgets/elevated_button_type_one.dart';
 import 'package:closet/presentation/widgets/text_form_field_type_one.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AuthorizationView extends StatelessWidget {
+  final cubit.AuthorizationView state;
   const AuthorizationView({
     Key? key,
+    required this.state,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final model = context.watch<AuthorizationModel>();
+
     return SafeArea(
       child: Scaffold(
         body: Container(
@@ -48,6 +53,7 @@ class AuthorizationView extends StatelessWidget {
               ),
               const SizedBox(height: 30),
               Form(
+                autovalidateMode: AutovalidateMode.disabled,
                 key: model.signInFormState,
                 child: Column(
                   children: [
@@ -55,15 +61,22 @@ class AuthorizationView extends StatelessWidget {
                       controller: model.loginController,
                       textInputAction: TextInputAction.next,
                       onTextChanged: (val) => model.login = val,
-                      validator: (val) => model.loginValidator(val, context),
+                      validator: (val) => model.loginValidator(
+                          val: val, context: context, users: state.users),
                       hintText: S.of(context).login,
                     ),
                     const SizedBox(height: 30),
                     TextFormFieldTypeOne(
+                      controller: model.passwordController,
+                      onFieldSubmitted: (val) => model.signIn(
+                        context,
+                        state.users,
+                      ),
                       obscureText: true,
                       textInputAction: TextInputAction.done,
                       onTextChanged: (val) => model.password = val,
-                      validator: (val) => model.passwordValidator(val, context),
+                      validator: (val) => model.passwordValidator(
+                          val: val, context: context, users: state.users),
                       hintText: S.of(context).password,
                     ),
                   ],
@@ -74,7 +87,10 @@ class AuthorizationView extends StatelessWidget {
                 height: 45,
                 width: MediaQuery.of(context).size.width,
                 child: ElevatedButtonTypeOne(
-                  onPressed: () async => model.signIn(context),
+                  onPressed: () => model.signIn(
+                    context,
+                    state.users,
+                  ),
                   title: S.of(context).sign_in,
                 ),
               ),
@@ -83,8 +99,7 @@ class AuthorizationView extends StatelessWidget {
                 height: 45,
                 width: MediaQuery.of(context).size.width,
                 child: ElevatedButtonTypeOne(
-                  onPressed: () => Navigator.of(context)
-                      .pushNamed(getIt.get<Registration>().route),
+                  onPressed: () => model.createAccountOnPressed(context),
                   title: S.of(context).create,
                 ),
               ),
