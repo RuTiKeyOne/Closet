@@ -22,7 +22,10 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "account": MessageLookupByLibrary.simpleMessage("Account"),
         "back": MessageLookupByLibrary.simpleMessage("Back"),
+        "chat": MessageLookupByLibrary.simpleMessage("Chat"),
+        "closet": MessageLookupByLibrary.simpleMessage("Closet"),
         "create": MessageLookupByLibrary.simpleMessage("Create"),
         "create_an_account":
             MessageLookupByLibrary.simpleMessage("Create an account"),
@@ -37,11 +40,15 @@ class MessageLookup extends MessageLookupByLibrary {
             "A user with this username already exists."),
         "login_validator_message_3": MessageLookupByLibrary.simpleMessage(
             "A user with this login already exists."),
+        "map": MessageLookupByLibrary.simpleMessage("Map"),
+        "new_1": MessageLookupByLibrary.simpleMessage("New"),
         "or_sign_up_with":
             MessageLookupByLibrary.simpleMessage("Or sign up with"),
+        "orders": MessageLookupByLibrary.simpleMessage("Orders"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "password_validator_message_1": MessageLookupByLibrary.simpleMessage(
             "The password cannot be empty."),
+        "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "sign_in": MessageLookupByLibrary.simpleMessage("Sign in"),
         "sign_in_to_continue":
             MessageLookupByLibrary.simpleMessage("Sign in to Continue"),

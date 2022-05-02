@@ -22,7 +22,10 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "account": MessageLookupByLibrary.simpleMessage("Аккаунт"),
         "back": MessageLookupByLibrary.simpleMessage("Назад"),
+        "chat": MessageLookupByLibrary.simpleMessage("Чат"),
+        "closet": MessageLookupByLibrary.simpleMessage("Чулан"),
         "create": MessageLookupByLibrary.simpleMessage("Создать"),
         "create_an_account":
             MessageLookupByLibrary.simpleMessage("Создать учетную запись"),
@@ -37,11 +40,15 @@ class MessageLookup extends MessageLookupByLibrary {
             "Пользователь с таким логином уже существует."),
         "login_validator_message_3": MessageLookupByLibrary.simpleMessage(
             "Пользователь с таким логином уже существует."),
+        "map": MessageLookupByLibrary.simpleMessage("Карта"),
+        "new_1": MessageLookupByLibrary.simpleMessage("Новый"),
         "or_sign_up_with":
             MessageLookupByLibrary.simpleMessage("Или войдите с помощью"),
+        "orders": MessageLookupByLibrary.simpleMessage("Заказы"),
         "password": MessageLookupByLibrary.simpleMessage("Пароль"),
         "password_validator_message_1": MessageLookupByLibrary.simpleMessage(
             "Пароль не может быть пустым."),
+        "profile": MessageLookupByLibrary.simpleMessage("Профиль"),
         "sign_in": MessageLookupByLibrary.simpleMessage("Войти"),
         "sign_in_to_continue":
             MessageLookupByLibrary.simpleMessage("Войдите чтобы продолжить"),

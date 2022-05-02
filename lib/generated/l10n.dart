@@ -209,6 +209,76 @@ class S {
       args: [],
     );
   }
+
+  /// `Closet`
+  String get closet {
+    return Intl.message(
+      'Closet',
+      name: 'closet',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Account`
+  String get account {
+    return Intl.message(
+      'Account',
+      name: 'account',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Profile`
+  String get profile {
+    return Intl.message(
+      'Profile',
+      name: 'profile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `New`
+  String get new_1 {
+    return Intl.message(
+      'New',
+      name: 'new_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Orders`
+  String get orders {
+    return Intl.message(
+      'Orders',
+      name: 'orders',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Chat`
+  String get chat {
+    return Intl.message(
+      'Chat',
+      name: 'chat',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Map`
+  String get map {
+    return Intl.message(
+      'Map',
+      name: 'map',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -35,7 +35,7 @@ class AuthorizationView extends StatelessWidget {
           child: ListView(
             padding: const EdgeInsets.symmetric(horizontal: 25),
             children: [
-              const SizedBox(height: 150),
+              const SizedBox(height: 100),
               Text(
                 S.of(context).welcome,
                 style: Theme.of(context)

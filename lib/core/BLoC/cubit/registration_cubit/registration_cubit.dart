@@ -19,7 +19,12 @@ class RegistrationCubit extends Cubit<RegistrationState> {
       required RegistrationState initialState})
       : super(initialState);
 
-  void emitRegistrationView() async {
+  void emitSyncRegistrationView() async {
+    final List<User> users = await controller.getUsers();
+    emit(RegistrationView(users));
+  }
+
+  void emitAsyncRegistrationView() async {
     final List<User> users = await controller.getUsers();
     await Future(() => emit(RegistrationView(users)));
   }
@@ -31,7 +36,7 @@ class RegistrationCubit extends Cubit<RegistrationState> {
       required BuildContext context}) async {
     final User user = User(login: login, password: password);
     await controller.add(user);
-    cubit.emitAthorizationView();
+    cubit.emitAsyncAthorizationView();
     Navigator.of(context).pushNamedAndRemoveUntil(
         getIt.get<navigation.Authorization>().route,
         (Route<dynamic> route) => false);

@@ -15,3 +15,7 @@ class Registration extends Route {
 class Main extends Route {
   Main() : super("Main");
 }
+
+class Profile extends Route {
+  Profile() : super("Profile");
+}

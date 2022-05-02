@@ -12,7 +12,12 @@ class AuthorizationCubit extends Cubit<AuthorizationState> {
   final DbController controller;
   AuthorizationCubit(this.controller, AuthorizationState state) : super(state);
 
-  void emitAthorizationView() async {
+  void emitSyncAthorizationView() async {
+    final List<User> users = await controller.getUsers();
+    emit(AuthorizationView(users));
+  }
+
+  void emitAsyncAthorizationView() async {
     final List<User> users = await controller.getUsers();
     await Future(() => emit(AuthorizationView(users)));
   }

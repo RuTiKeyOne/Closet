@@ -37,7 +37,7 @@ class RegistrationView extends StatelessWidget {
             child: ListView(
               padding: const EdgeInsets.symmetric(horizontal: 25),
               children: [
-                const SizedBox(height: 150),
+                const SizedBox(height: 100),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [

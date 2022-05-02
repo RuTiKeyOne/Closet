@@ -14,13 +14,15 @@
     "sign_up" : "Регистрация",
     "create_an_account" : "Создать учетную запись",
     "login_or_password_is_incorrect" : "Логин или пароль неверны.",
-    "login_validator_message_3" : "Пользователь с таким логином уже существует."
+    "login_validator_message_3" : "Пользователь с таким логином уже существует.",
+    "closet" : "Чулан",
+    "account" : "Аккаунт",
+    "profile" : "Профиль",
+    "new_1" : "Новый",
+    "orders" : "Заказы",
+    "chat" : "Чат",
+    "map" : "Карта"
 
-
-
-
-
- 
 
 
 }

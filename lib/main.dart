@@ -5,6 +5,7 @@ import 'package:closet/generated/l10n.dart';
 import 'package:closet/presentation/authorization/authorization_screen.dart';
 import 'package:closet/presentation/main/main_screen.dart';
 import 'package:closet/presentation/navigation/route.dart';
+import 'package:closet/presentation/profile/profile_screen.dart';
 import 'package:closet/presentation/registration/registration_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -54,6 +55,7 @@ class MyApp extends StatelessWidget {
               getIt.get<Registration>().route: (context) =>
                   const RegistrationScreen(),
               getIt.get<Main>().route: (context) => const MainScreen(),
+              getIt.get<Profile>().route: (context) => const ProfileScreen(),
             },
           ),
         );

@@ -14,5 +14,12 @@
     "sign_up" : "Sign Up",
     "create_an_account" : "Create an account",
     "login_or_password_is_incorrect" : "Login or password is incorrect.",
-    "login_validator_message_3" : "A user with this login already exists."
+    "login_validator_message_3" : "A user with this login already exists.",
+    "closet" : "Closet",
+    "account" : "Account",
+    "profile" : "Profile",
+    "new_1" : "New",
+    "orders" : "Orders",
+    "chat" : "Chat",
+    "map" : "Map"
  }
