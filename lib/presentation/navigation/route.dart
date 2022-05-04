@@ -31,3 +31,7 @@ class Chat extends Route {
 class NewOrder extends Route {
   NewOrder() : super("NewOrder");
 }
+
+class Orders extends Route {
+  Orders() : super("Orders");
+}

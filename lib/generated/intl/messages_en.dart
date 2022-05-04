@@ -63,6 +63,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "no": MessageLookupByLibrary.simpleMessage("No"),
         "or_sign_up_with":
             MessageLookupByLibrary.simpleMessage("Or sign up with"),
+        "order": MessageLookupByLibrary.simpleMessage("Order"),
+        "order_completed":
+            MessageLookupByLibrary.simpleMessage("Order completed"),
         "orders": MessageLookupByLibrary.simpleMessage("Orders"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "password_validator_message_1": MessageLookupByLibrary.simpleMessage(
@@ -85,6 +88,12 @@ class MessageLookup extends MessageLookupByLibrary {
             "The telephone cannot be empty."),
         "telephone_validator_message_2": MessageLookupByLibrary.simpleMessage(
             "Enter the correct phone number."),
+        "the_order_has_been_placed":
+            MessageLookupByLibrary.simpleMessage("The order has been placed"),
+        "things_are_not_in_stock":
+            MessageLookupByLibrary.simpleMessage("Things are not stock"),
+        "things_in_stock":
+            MessageLookupByLibrary.simpleMessage("Things In Stock"),
         "to_order": MessageLookupByLibrary.simpleMessage("To order"),
         "type_of_delivery_to_the_warehouse":
             MessageLookupByLibrary.simpleMessage(

@@ -53,6 +53,11 @@
     "by_yourself" : "By yourself",
     "staff" : "Staff",
     "cost" : "Cost",
-    "rub" : "rub."
+    "rub" : "rub.",
+    "order" : "Order",
+    "things_in_stock" : "Things In Stock",
+    "things_are_not_in_stock" : "Things are not stock",
+    "the_order_has_been_placed" : "The order has been placed",
+    "order_completed" : "Order completed"
 
  }

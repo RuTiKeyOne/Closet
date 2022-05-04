@@ -65,6 +65,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "no": MessageLookupByLibrary.simpleMessage("Нет"),
         "or_sign_up_with":
             MessageLookupByLibrary.simpleMessage("Или войдите с помощью"),
+        "order": MessageLookupByLibrary.simpleMessage("Заказ"),
+        "order_completed":
+            MessageLookupByLibrary.simpleMessage("Заказ завершен"),
         "orders": MessageLookupByLibrary.simpleMessage("Заказы"),
         "password": MessageLookupByLibrary.simpleMessage("Пароль"),
         "password_validator_message_1": MessageLookupByLibrary.simpleMessage(
@@ -87,11 +90,17 @@ class MessageLookup extends MessageLookupByLibrary {
             "Телефон не может быть пустым."),
         "telephone_validator_message_2": MessageLookupByLibrary.simpleMessage(
             "Введите корректрный телефон."),
+        "the_order_has_been_placed":
+            MessageLookupByLibrary.simpleMessage("Заказ размещен"),
+        "things_are_not_in_stock":
+            MessageLookupByLibrary.simpleMessage("Вещи не на складе"),
+        "things_in_stock":
+            MessageLookupByLibrary.simpleMessage("Вещи на складе"),
         "to_order": MessageLookupByLibrary.simpleMessage("Заказать"),
         "type_of_delivery_to_the_warehouse":
             MessageLookupByLibrary.simpleMessage("Тип\nдоставки\nна склад"),
         "warehouse": MessageLookupByLibrary.simpleMessage("Склад"),
-        "week": MessageLookupByLibrary.simpleMessage("Недель(ли)"),
+        "week": MessageLookupByLibrary.simpleMessage("Недель(ля)(ли)"),
         "welcome": MessageLookupByLibrary.simpleMessage("Добро пожаловать"),
         "welcome_message": MessageLookupByLibrary.simpleMessage(
             "Добрый день, вы можете задать свои вопросы тут.")

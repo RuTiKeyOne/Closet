@@ -46,14 +46,24 @@
     "size" : "Размер",
     "m_2" : "м^2",
     "rental_period" : "Срок\nаренды",
-    "week" : "Недель(ли)",
+    "week" : "Недель(ля)(ли)",
     "type_of_delivery_to_the_warehouse" : "Тип\nдоставки\nна склад",
     "delivery_to_the_warehouse" : "Доставка на склад",
     "add_contract" : "Добавить договор",
     "by_yourself" : "Самостоятельно",
     "staff" : "Сотрудники",
     "cost" : "Стоймость",
-    "rub" : "руб."
+    "rub" : "руб.",
+    "order" : "Заказ",
+    "things_in_stock" : "Вещи на складе",
+    "things_are_not_in_stock" : "Вещи не на складе",
+    "the_order_has_been_placed" : "Заказ размещен",
+    "order_completed" : "Заказ завершен"
+
+
+
+
+
 
 
  

@@ -11,6 +11,7 @@ import 'package:closet/presentation/edit_profile/edit_profile_screen.dart';
 import 'package:closet/presentation/main/main_screen.dart';
 import 'package:closet/presentation/navigation/route.dart';
 import 'package:closet/presentation/new_order/new_order_screen.dart';
+import 'package:closet/presentation/orders/orders_screen.dart';
 import 'package:closet/presentation/profile/profile_screen.dart';
 import 'package:closet/presentation/registration/registration_screen.dart';
 import 'package:flutter/material.dart';
@@ -66,7 +67,8 @@ class MyApp extends StatelessWidget {
               getIt.get<EditProfile>().route: (context) =>
                   const EditProfileScreen(),
               getIt.get<Chat>().route: (context) => const ChatScreen(),
-              getIt.get<NewOrder>().route: (context) => const NewOrderScreen()
+              getIt.get<NewOrder>().route: (context) => const NewOrderScreen(),
+              getIt.get<Orders>().route: (context) => const OrdersScreen(),
             },
           ),
         );

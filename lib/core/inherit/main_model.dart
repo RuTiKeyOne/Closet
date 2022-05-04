@@ -1,5 +1,6 @@
 import 'package:closet/core/BLoC/cubit/chat_cubit/chat_cubit.dart';
 import 'package:closet/core/domain/model/message.dart';
+import 'package:closet/core/domain/model/order.dart';
 import 'package:closet/core/domain/model/user.dart';
 import 'package:closet/core/internal/locator.dart';
 import 'package:closet/generated/l10n.dart';
@@ -67,9 +68,15 @@ class MainModel extends ChangeNotifier {
     Navigator.of(context).pushNamed(getIt.get<navigation.Chat>().route);
   }
 
-  void newOrder(BuildContext context, User user) {
+  void openNewOrder(BuildContext context, User user) {
     Navigator.of(context).pushNamedAndRemoveUntil(
         getIt.get<navigation.NewOrder>().route, (Route<dynamic> route) => false,
+        arguments: user);
+  }
+
+  void openOrders(BuildContext context, User user) {
+    Navigator.of(context).pushNamedAndRemoveUntil(
+        getIt.get<navigation.Orders>().route, (Route<dynamic> route) => false,
         arguments: user);
   }
 }

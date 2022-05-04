@@ -64,7 +64,7 @@ class MainView extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       PartItem(
-                        onTap: () => model.newOrder(context, user),
+                        onTap: () => model.openNewOrder(context, user),
                         icon: Icon(
                           Icons.add,
                           color: Theme.of(context).textTheme.headline4!.color,
@@ -73,7 +73,7 @@ class MainView extends StatelessWidget {
                         title: S.of(context).new_1,
                       ),
                       PartItem(
-                        onTap: () {},
+                        onTap: () => model.openOrders(context, user),
                         icon: SvgPicture.asset(
                           "assets/icons/order.svg",
                           color: Theme.of(context).textTheme.headline4!.color,

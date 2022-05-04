@@ -5,6 +5,7 @@ import 'package:closet/core/BLoC/cubit/new_order/new_order_cubit.dart';
 import 'package:closet/core/BLoC/cubit/registration_cubit/registration_cubit.dart';
 import 'package:closet/core/data/db/user_db_impl.dart';
 import 'package:closet/core/data/repository/db_repository_impl.dart';
+import 'package:closet/core/domain/model/order.dart';
 import 'package:closet/core/domain/repository/db_repository.dart';
 import 'package:closet/core/internal/db_di/db_controller.dart';
 import 'package:closet/presentation/navigation/route.dart';
@@ -21,6 +22,7 @@ Future<void> setup() async {
   getIt.registerLazySingleton<EditProfile>(() => EditProfile());
   getIt.registerLazySingleton<Chat>(() => Chat());
   getIt.registerLazySingleton<NewOrder>(() => NewOrder());
+  getIt.registerLazySingleton<Orders>(() => Orders());
 
   getIt
       .registerLazySingleton<UserDatabaseImpl>(() => UserDatabaseImpl.instance);

@@ -599,6 +599,56 @@ class S {
       args: [],
     );
   }
+
+  /// `Order`
+  String get order {
+    return Intl.message(
+      'Order',
+      name: 'order',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Things In Stock`
+  String get things_in_stock {
+    return Intl.message(
+      'Things In Stock',
+      name: 'things_in_stock',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Things are not stock`
+  String get things_are_not_in_stock {
+    return Intl.message(
+      'Things are not stock',
+      name: 'things_are_not_in_stock',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The order has been placed`
+  String get the_order_has_been_placed {
+    return Intl.message(
+      'The order has been placed',
+      name: 'the_order_has_been_placed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Order completed`
+  String get order_completed {
+    return Intl.message(
+      'Order completed',
+      name: 'order_completed',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
