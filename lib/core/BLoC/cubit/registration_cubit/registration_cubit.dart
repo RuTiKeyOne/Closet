@@ -1,5 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:closet/core/BLoC/cubit/authorization_cubit/authorization_cubit.dart';
+import 'package:closet/core/BLoC/cubit/edit_cubit/edit_cubit.dart';
 import 'package:closet/core/domain/model/user.dart';
 import 'package:closet/core/internal/db_di/db_controller.dart';
 import 'package:closet/core/internal/locator.dart';
@@ -11,11 +12,13 @@ part 'registration_state.dart';
 
 class RegistrationCubit extends Cubit<RegistrationState> {
   final DbController controller;
-  final AuthorizationCubit cubit;
+  final EditCubit editCubit;
+  final AuthorizationCubit authorizationCubit;
 
   RegistrationCubit(
-      {required this.cubit,
+      {required this.authorizationCubit,
       required this.controller,
+      required this.editCubit,
       required RegistrationState initialState})
       : super(initialState);
 
@@ -34,11 +37,12 @@ class RegistrationCubit extends Cubit<RegistrationState> {
       required String password,
       required List<User> users,
       required BuildContext context}) async {
-    final User user = User(login: login, password: password);
+    final User user = User(login: login, password: password, orders: []);
     await controller.add(user);
-    cubit.emitAsyncAthorizationView();
+    authorizationCubit.emitAsyncAthorizationView();
     Navigator.of(context).pushNamedAndRemoveUntil(
         getIt.get<navigation.Authorization>().route,
         (Route<dynamic> route) => false);
+    editCubit.emitEditView();
   }
 }

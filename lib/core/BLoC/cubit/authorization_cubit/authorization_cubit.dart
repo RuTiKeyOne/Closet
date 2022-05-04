@@ -31,7 +31,8 @@ class AuthorizationCubit extends Cubit<AuthorizationState> {
         (element) => element.login == login && element.password == password);
     if (user != null) {
       Navigator.of(context).pushNamedAndRemoveUntil(
-          getIt.get<route.Main>().route, (Route<dynamic> route) => false);
+          getIt.get<route.Main>().route, (Route<dynamic> route) => false,
+          arguments: user);
     }
   }
 }

@@ -18,7 +18,6 @@ class AuthorizationScreen extends StatelessWidget {
         "",
         TextEditingController(text: ""),
         GlobalKey<FormState>(),
-        AutovalidateMode.disabled,
       ),
       child: BlocBuilder<cubit.AuthorizationCubit, cubit.AuthorizationState>(
         builder: (context, state) {

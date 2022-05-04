@@ -21,8 +21,40 @@
     "new_1" : "Новый",
     "orders" : "Заказы",
     "chat" : "Чат",
-    "map" : "Карта"
+    "map" : "Карта",
+    "no" : "Нет",
+    "edit_profile" : "Редактировать профиль",
+    "edit" : "Редактировать",
+    "save" : "Сохранить",
+    "sign_out" : "Выйти",
+    "telephone" : "Телефон",
+    "email" : "Почта",
+    "email_validator_message_1" : "Почта не может быть пустой.",
+    "email_validator_message_2" : "Введите корректное значение почты.",
+    "telephone_validator_message_1" : "Телефон не может быть пустым.",
+    "telephone_validator_message_2" : "Введите корректрный телефон.",
+    "support_chat" : "Чат поддержки",
+    "message" : "Сообщение",
+    "welcome_message" : "Добрый день, вы можете задать свои вопросы тут.",
+    "new_order" : "Новый заказ",
+    "to_order" : "Заказать",
+    "tariff" : "Тариф",
+    "base" : "Базовый",
+    "warehouse" : "Склад",
+    "container" : "Контейнер",
+    "box" : "Бокс",
+    "size" : "Размер",
+    "m_2" : "м^2",
+    "rental_period" : "Срок\nаренды",
+    "week" : "Недель(ли)",
+    "type_of_delivery_to_the_warehouse" : "Тип\nдоставки\nна склад",
+    "delivery_to_the_warehouse" : "Доставка на склад",
+    "add_contract" : "Добавить договор",
+    "by_yourself" : "Самостоятельно",
+    "staff" : "Сотрудники",
+    "cost" : "Стоймость",
+    "rub" : "руб."
 
 
-
+ 
 }

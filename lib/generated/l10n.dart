@@ -279,6 +279,326 @@ class S {
       args: [],
     );
   }
+
+  /// `No`
+  String get no {
+    return Intl.message(
+      'No',
+      name: 'no',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Edit profile`
+  String get edit_profile {
+    return Intl.message(
+      'Edit profile',
+      name: 'edit_profile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Edit`
+  String get edit {
+    return Intl.message(
+      'Edit',
+      name: 'edit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save`
+  String get save {
+    return Intl.message(
+      'Save',
+      name: 'save',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign out`
+  String get sign_out {
+    return Intl.message(
+      'Sign out',
+      name: 'sign_out',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Telephone`
+  String get telephone {
+    return Intl.message(
+      'Telephone',
+      name: 'telephone',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email`
+  String get email {
+    return Intl.message(
+      'Email',
+      name: 'email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The email cannot be empty.`
+  String get email_validator_message_1 {
+    return Intl.message(
+      'The email cannot be empty.',
+      name: 'email_validator_message_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter the correct email value.`
+  String get email_validator_message_2 {
+    return Intl.message(
+      'Enter the correct email value.',
+      name: 'email_validator_message_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The telephone cannot be empty.`
+  String get telephone_validator_message_1 {
+    return Intl.message(
+      'The telephone cannot be empty.',
+      name: 'telephone_validator_message_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter the correct phone number.`
+  String get telephone_validator_message_2 {
+    return Intl.message(
+      'Enter the correct phone number.',
+      name: 'telephone_validator_message_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Support chat`
+  String get support_chat {
+    return Intl.message(
+      'Support chat',
+      name: 'support_chat',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Message`
+  String get message {
+    return Intl.message(
+      'Message',
+      name: 'message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Good afternoon, you can ask your questions here.`
+  String get welcome_message {
+    return Intl.message(
+      'Good afternoon, you can ask your questions here.',
+      name: 'welcome_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `New order`
+  String get new_order {
+    return Intl.message(
+      'New order',
+      name: 'new_order',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `To order`
+  String get to_order {
+    return Intl.message(
+      'To order',
+      name: 'to_order',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tariff`
+  String get tariff {
+    return Intl.message(
+      'Tariff',
+      name: 'tariff',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Base`
+  String get base {
+    return Intl.message(
+      'Base',
+      name: 'base',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Warehouse`
+  String get warehouse {
+    return Intl.message(
+      'Warehouse',
+      name: 'warehouse',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Container`
+  String get container {
+    return Intl.message(
+      'Container',
+      name: 'container',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Box`
+  String get box {
+    return Intl.message(
+      'Box',
+      name: 'box',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Size`
+  String get size {
+    return Intl.message(
+      'Size',
+      name: 'size',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `m^2`
+  String get m_2 {
+    return Intl.message(
+      'm^2',
+      name: 'm_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Rental\nperiod`
+  String get rental_period {
+    return Intl.message(
+      'Rental\nperiod',
+      name: 'rental_period',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Week`
+  String get week {
+    return Intl.message(
+      'Week',
+      name: 'week',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Type\nof delivery\nto the\nwarehouse`
+  String get type_of_delivery_to_the_warehouse {
+    return Intl.message(
+      'Type\nof delivery\nto the\nwarehouse',
+      name: 'type_of_delivery_to_the_warehouse',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delivery to the warehouse`
+  String get delivery_to_the_warehouse {
+    return Intl.message(
+      'Delivery to the warehouse',
+      name: 'delivery_to_the_warehouse',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add contract`
+  String get add_contract {
+    return Intl.message(
+      'Add contract',
+      name: 'add_contract',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `By yourself`
+  String get by_yourself {
+    return Intl.message(
+      'By yourself',
+      name: 'by_yourself',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Staff`
+  String get staff {
+    return Intl.message(
+      'Staff',
+      name: 'staff',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cost`
+  String get cost {
+    return Intl.message(
+      'Cost',
+      name: 'cost',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `rub.`
+  String get rub {
+    return Intl.message(
+      'rub.',
+      name: 'rub',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -23,14 +23,29 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "account": MessageLookupByLibrary.simpleMessage("Account"),
+        "add_contract": MessageLookupByLibrary.simpleMessage("Add contract"),
         "back": MessageLookupByLibrary.simpleMessage("Back"),
+        "base": MessageLookupByLibrary.simpleMessage("Base"),
+        "box": MessageLookupByLibrary.simpleMessage("Box"),
+        "by_yourself": MessageLookupByLibrary.simpleMessage("By yourself"),
         "chat": MessageLookupByLibrary.simpleMessage("Chat"),
         "closet": MessageLookupByLibrary.simpleMessage("Closet"),
+        "container": MessageLookupByLibrary.simpleMessage("Container"),
+        "cost": MessageLookupByLibrary.simpleMessage("Cost"),
         "create": MessageLookupByLibrary.simpleMessage("Create"),
         "create_an_account":
             MessageLookupByLibrary.simpleMessage("Create an account"),
+        "delivery_to_the_warehouse":
+            MessageLookupByLibrary.simpleMessage("Delivery to the warehouse"),
         "don_t_you_have_an_account":
             MessageLookupByLibrary.simpleMessage("Don\'t you have an account?"),
+        "edit": MessageLookupByLibrary.simpleMessage("Edit"),
+        "edit_profile": MessageLookupByLibrary.simpleMessage("Edit profile"),
+        "email": MessageLookupByLibrary.simpleMessage("Email"),
+        "email_validator_message_1":
+            MessageLookupByLibrary.simpleMessage("The email cannot be empty."),
+        "email_validator_message_2": MessageLookupByLibrary.simpleMessage(
+            "Enter the correct email value."),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "login_or_password_is_incorrect": MessageLookupByLibrary.simpleMessage(
             "Login or password is incorrect."),
@@ -40,8 +55,12 @@ class MessageLookup extends MessageLookupByLibrary {
             "A user with this username already exists."),
         "login_validator_message_3": MessageLookupByLibrary.simpleMessage(
             "A user with this login already exists."),
+        "m_2": MessageLookupByLibrary.simpleMessage("m^2"),
         "map": MessageLookupByLibrary.simpleMessage("Map"),
+        "message": MessageLookupByLibrary.simpleMessage("Message"),
         "new_1": MessageLookupByLibrary.simpleMessage("New"),
+        "new_order": MessageLookupByLibrary.simpleMessage("New order"),
+        "no": MessageLookupByLibrary.simpleMessage("No"),
         "or_sign_up_with":
             MessageLookupByLibrary.simpleMessage("Or sign up with"),
         "orders": MessageLookupByLibrary.simpleMessage("Orders"),
@@ -49,10 +68,31 @@ class MessageLookup extends MessageLookupByLibrary {
         "password_validator_message_1": MessageLookupByLibrary.simpleMessage(
             "The password cannot be empty."),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
+        "rental_period": MessageLookupByLibrary.simpleMessage("Rental\nperiod"),
+        "rub": MessageLookupByLibrary.simpleMessage("rub."),
+        "save": MessageLookupByLibrary.simpleMessage("Save"),
         "sign_in": MessageLookupByLibrary.simpleMessage("Sign in"),
         "sign_in_to_continue":
             MessageLookupByLibrary.simpleMessage("Sign in to Continue"),
+        "sign_out": MessageLookupByLibrary.simpleMessage("Sign out"),
         "sign_up": MessageLookupByLibrary.simpleMessage("Sign Up"),
-        "welcome": MessageLookupByLibrary.simpleMessage("Welcome")
+        "size": MessageLookupByLibrary.simpleMessage("Size"),
+        "staff": MessageLookupByLibrary.simpleMessage("Staff"),
+        "support_chat": MessageLookupByLibrary.simpleMessage("Support chat"),
+        "tariff": MessageLookupByLibrary.simpleMessage("Tariff"),
+        "telephone": MessageLookupByLibrary.simpleMessage("Telephone"),
+        "telephone_validator_message_1": MessageLookupByLibrary.simpleMessage(
+            "The telephone cannot be empty."),
+        "telephone_validator_message_2": MessageLookupByLibrary.simpleMessage(
+            "Enter the correct phone number."),
+        "to_order": MessageLookupByLibrary.simpleMessage("To order"),
+        "type_of_delivery_to_the_warehouse":
+            MessageLookupByLibrary.simpleMessage(
+                "Type\nof delivery\nto the\nwarehouse"),
+        "warehouse": MessageLookupByLibrary.simpleMessage("Warehouse"),
+        "week": MessageLookupByLibrary.simpleMessage("Week"),
+        "welcome": MessageLookupByLibrary.simpleMessage("Welcome"),
+        "welcome_message": MessageLookupByLibrary.simpleMessage(
+            "Good afternoon, you can ask your questions here.")
       };
 }

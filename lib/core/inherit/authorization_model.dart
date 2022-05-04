@@ -8,7 +8,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AuthorizationModel extends ChangeNotifier {
   final GlobalKey<FormState> signInFormState;
-  AutovalidateMode autoValidateMode;
 
   String _login;
   String get login => _login;
@@ -23,7 +22,7 @@ class AuthorizationModel extends ChangeNotifier {
   TextEditingController loginController;
 
   String _password;
-  String get password => _login;
+  String get password => _password;
   set password(String val) => {
         _password = val,
         passwordController.text = _password,
@@ -33,8 +32,13 @@ class AuthorizationModel extends ChangeNotifier {
 
   TextEditingController passwordController;
 
-  AuthorizationModel(this._login, this.loginController, this._password,
-      this.passwordController, this.signInFormState, this.autoValidateMode);
+  AuthorizationModel(
+    this._login,
+    this.loginController,
+    this._password,
+    this.passwordController,
+    this.signInFormState,
+  );
 
   String? loginValidator(
       {required String? val,

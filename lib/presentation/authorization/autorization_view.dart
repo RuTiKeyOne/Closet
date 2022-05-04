@@ -1,9 +1,7 @@
 import 'package:closet/core/BLoC/cubit/authorization_cubit/authorization_cubit.dart'
     as cubit;
 import 'package:closet/core/inherit/authorization_model.dart';
-import 'package:closet/core/internal/locator.dart';
 import 'package:closet/generated/l10n.dart';
-import 'package:closet/presentation/navigation/route.dart';
 import 'package:closet/presentation/widgets/elevated_button_type_one.dart';
 import 'package:closet/presentation/widgets/text_form_field_type_one.dart';
 import 'package:flutter/material.dart';
@@ -87,6 +85,7 @@ class AuthorizationView extends StatelessWidget {
                 height: 45,
                 width: MediaQuery.of(context).size.width,
                 child: ElevatedButtonTypeOne(
+                  backgroundColor: Theme.of(context).buttonColor,
                   onPressed: () => model.signIn(
                     context,
                     state.users,
@@ -99,6 +98,7 @@ class AuthorizationView extends StatelessWidget {
                 height: 45,
                 width: MediaQuery.of(context).size.width,
                 child: ElevatedButtonTypeOne(
+                  backgroundColor: Theme.of(context).buttonColor,
                   onPressed: () => model.createAccountOnPressed(context),
                   title: S.of(context).create,
                 ),

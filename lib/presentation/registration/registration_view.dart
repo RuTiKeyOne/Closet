@@ -91,6 +91,7 @@ class RegistrationView extends StatelessWidget {
                   height: 45,
                   width: MediaQuery.of(context).size.width,
                   child: ElevatedButtonTypeOne(
+                    backgroundColor: Theme.of(context).buttonColor,
                     onPressed: () => model.createAccount(context, state.users),
                     title: S.of(context).create,
                   ),
@@ -100,6 +101,7 @@ class RegistrationView extends StatelessWidget {
                   height: 45,
                   width: MediaQuery.of(context).size.width,
                   child: ElevatedButtonTypeOne(
+                    backgroundColor: Theme.of(context).buttonColor,
                     onPressed: () => model.backOnPressed(context),
                     title: S.of(context).back,
                   ),

@@ -19,3 +19,15 @@ class Main extends Route {
 class Profile extends Route {
   Profile() : super("Profile");
 }
+
+class EditProfile extends Route {
+  EditProfile() : super("EditProfile");
+}
+
+class Chat extends Route {
+  Chat() : super("Chat");
+}
+
+class NewOrder extends Route {
+  NewOrder() : super("NewOrder");
+}

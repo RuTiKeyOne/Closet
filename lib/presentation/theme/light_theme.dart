@@ -7,6 +7,7 @@ final light = ThemeData(
   buttonColor: const Color(0xff3589FF),
   errorColor: const Color(0xffF3C8B5),
   accentColor: const Color(0xff000000),
+  accentIconTheme: const IconThemeData(color: Color(0xff000000)),
   textTheme: const TextTheme(
     headline1: TextStyle(
       fontSize: 48,
@@ -28,7 +29,12 @@ final light = ThemeData(
     headline5: TextStyle(
       fontWeight: FontWeight.w400,
       fontSize: 20,
-      color: Color(0xff000000),
+      color: Color(0xffACACAC),
+    ),
+    bodyText1: TextStyle(
+      fontWeight: FontWeight.w300,
+      fontSize: 16,
+      color: Color(0xffA08AD3),
     ),
   ),
 );
