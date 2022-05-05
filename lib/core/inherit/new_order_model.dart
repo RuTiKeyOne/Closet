@@ -81,7 +81,7 @@ class NewOrderModel extends ChangeNotifier {
   void makeOrder(BuildContext context, User user) async {
     List<Order> updatedOrders = user.orders ?? [];
     final Order newOrder = Order(
-        id: rnd.nextInt(10000),
+        id: updatedOrders.length + 1,
         contractFileName: contractFileName,
         contractPath: contractPath,
         cost: cost,

@@ -96,7 +96,7 @@ class OrdersView extends StatelessWidget {
                                 Text(
                                   S.of(context).order +
                                       " " +
-                                      (index + 1).toString(),
+                                      model.sortedOrders[index].id.toString(),
                                   style: Theme.of(context)
                                       .textTheme
                                       .bodyText1!

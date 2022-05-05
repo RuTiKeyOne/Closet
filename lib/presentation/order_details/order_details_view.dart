@@ -58,9 +58,7 @@ class OrderDetailsView extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 25),
                       child: Text(
-                        S.of(context).order +
-                            " " +
-                            (model.index + 1).toString(),
+                        S.of(context).order + " " + model.order.id.toString(),
                         style: Theme.of(context)
                             .textTheme
                             .headline1!
