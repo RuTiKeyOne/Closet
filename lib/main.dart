@@ -3,6 +3,7 @@ import 'package:closet/core/BLoC/cubit/chat_cubit/chat_cubit.dart';
 import 'package:closet/core/BLoC/cubit/edit_cubit/edit_cubit.dart';
 import 'package:closet/core/BLoC/cubit/new_order/new_order_cubit.dart';
 import 'package:closet/core/BLoC/cubit/registration_cubit/registration_cubit.dart';
+import 'package:closet/core/BLoC/cubit/video_survailance/video_surveilance_cubit.dart';
 import 'package:closet/core/internal/locator.dart';
 import 'package:closet/generated/l10n.dart';
 import 'package:closet/presentation/authorization/authorization_screen.dart';
@@ -11,9 +12,12 @@ import 'package:closet/presentation/edit_profile/edit_profile_screen.dart';
 import 'package:closet/presentation/main/main_screen.dart';
 import 'package:closet/presentation/navigation/route.dart';
 import 'package:closet/presentation/new_order/new_order_screen.dart';
+import 'package:closet/presentation/open_box/open_box_screen.dart';
+import 'package:closet/presentation/order_details/order_details_screen.dart';
 import 'package:closet/presentation/orders/orders_screen.dart';
 import 'package:closet/presentation/profile/profile_screen.dart';
 import 'package:closet/presentation/registration/registration_screen.dart';
+import 'package:closet/presentation/video_surveillance/video_surveilance_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -44,6 +48,8 @@ class MyApp extends StatelessWidget {
             BlocProvider(create: (context) => getIt.get<EditCubit>()),
             BlocProvider(create: (context) => getIt.get<ChatCubit>()),
             BlocProvider(create: (context) => getIt.get<NewOrderCubit>()),
+            BlocProvider(
+                create: (context) => getIt.get<VideoSurveilanceCubit>())
           ],
           child: MaterialApp(
             debugShowCheckedModeBanner: false,
@@ -69,6 +75,11 @@ class MyApp extends StatelessWidget {
               getIt.get<Chat>().route: (context) => const ChatScreen(),
               getIt.get<NewOrder>().route: (context) => const NewOrderScreen(),
               getIt.get<Orders>().route: (context) => const OrdersScreen(),
+              getIt.get<OrderDetails>().route: (context) =>
+                  const OrderDetailsScreen(),
+              getIt.get<OpenBox>().route: (context) => const OpenBoxScreen(),
+              getIt.get<VideoSurveilance>().route: (context) =>
+                  const VideoSurveilanceScreen(),
             },
           ),
         );

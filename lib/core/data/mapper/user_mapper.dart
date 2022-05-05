@@ -14,6 +14,7 @@ class UserMapper {
       telephone: model.telephone,
       orders: model.orders
           ?.map((e) => Order(
+                id: e.id,
                 weekValue: e.weekValue,
                 typeDelivery:
                     typeOfDeliveryToTheWarehouse.values[e.typeDeliveryIndex],
@@ -23,7 +24,7 @@ class UserMapper {
                 typeOrder: orderType.values[e.typeOrderIndex],
                 status: orderStatus.values[e.statusIndex],
                 contractFileName: e.contractFileName,
-                contractPath: e.contractFileName,
+                contractPath: e.contractPath,
               ))
           .toList(),
     );
@@ -38,6 +39,7 @@ class UserMapper {
       telephone: user.telephone,
       orders: user.orders
           ?.map((e) => OrderModel(
+                id: e.id,
                 typeDeliveryIndex: e.typeDelivery.index,
                 typeWarehouseIndex: e.typeWarehouse.index,
                 sizeValue: e.sizeValue,
@@ -46,7 +48,7 @@ class UserMapper {
                 typeOrderIndex: e.typeOrder.index,
                 statusIndex: e.status.index,
                 contractFileName: e.contractFileName,
-                contractPath: e.contractFileName,
+                contractPath: e.contractPath,
               ))
           .toList(),
     );
@@ -62,6 +64,7 @@ class UserMapper {
               telephone: e.telephone,
               orders: e.orders
                   ?.map((e) => Order(
+                        id: e.id,
                         weekValue: e.weekValue,
                         typeDelivery: typeOfDeliveryToTheWarehouse
                             .values[e.typeDeliveryIndex],
@@ -72,7 +75,7 @@ class UserMapper {
                         typeOrder: orderType.values[e.typeOrderIndex],
                         status: orderStatus.values[e.statusIndex],
                         contractFileName: e.contractFileName,
-                        contractPath: e.contractFileName,
+                        contractPath: e.contractPath,
                       ))
                   .toList(),
             ))

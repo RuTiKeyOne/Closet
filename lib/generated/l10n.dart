@@ -649,6 +649,186 @@ class S {
       args: [],
     );
   }
+
+  /// `What is included`
+  String get what_is_included {
+    return Intl.message(
+      'What is included',
+      name: 'what_is_included',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Box rental`
+  String get box_rental {
+    return Intl.message(
+      'Box rental',
+      name: 'box_rental',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Castle`
+  String get castle {
+    return Intl.message(
+      'Castle',
+      name: 'castle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Seal`
+  String get seal {
+    return Intl.message(
+      'Seal',
+      name: 'seal',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Security`
+  String get security {
+    return Intl.message(
+      'Security',
+      name: 'security',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Video surveillance`
+  String get video_surveillance {
+    return Intl.message(
+      'Video surveillance',
+      name: 'video_surveillance',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Access to boxing 24/7`
+  String get access_to_boxing_24_7 {
+    return Intl.message(
+      'Access to boxing 24/7',
+      name: 'access_to_boxing_24_7',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Status`
+  String get status {
+    return Intl.message(
+      'Status',
+      name: 'status',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Details`
+  String get details {
+    return Intl.message(
+      'Details',
+      name: 'details',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Open box`
+  String get open_box {
+    return Intl.message(
+      'Open box',
+      name: 'open_box',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Change status`
+  String get change_status {
+    return Intl.message(
+      'Change status',
+      name: 'change_status',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Contract`
+  String get contract {
+    return Intl.message(
+      'Contract',
+      name: 'contract',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `QR code`
+  String get qr_code {
+    return Intl.message(
+      'QR code',
+      name: 'qr_code',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bring the QR code to the box`
+  String get bring_the_qr_code_to_the_box {
+    return Intl.message(
+      'Bring the QR code to the box',
+      name: 'bring_the_qr_code_to_the_box',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Example QR code`
+  String get example_qr_code {
+    return Intl.message(
+      'Example QR code',
+      name: 'example_qr_code',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Camera 1`
+  String get camera_1 {
+    return Intl.message(
+      'Camera 1',
+      name: 'camera_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Camera 2`
+  String get camera_2 {
+    return Intl.message(
+      'Camera 2',
+      name: 'camera_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Chat order`
+  String get chat_order {
+    return Intl.message(
+      'Chat order',
+      name: 'chat_order',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

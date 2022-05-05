@@ -20,24 +20,61 @@ class MainModel extends ChangeNotifier {
     final availableMaps = await MapLauncher.installedMaps;
 
     showModalBottomSheet(
+      elevation: 10,
+      backgroundColor: Theme.of(context).textTheme.headline1!.color,
+      shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.circular(20))),
       context: context,
       builder: (BuildContext context) {
         return SafeArea(
           child: SingleChildScrollView(
             child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(30),
+              ),
               child: Wrap(
                 children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 25, vertical: 10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        GestureDetector(
+                            onTap: () => Navigator.of(context).pop(),
+                            child: Text(
+                              S.of(context).back,
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .headline5!
+                                  .copyWith(fontSize: 16),
+                            )),
+                        Text(
+                          S.of(context).map,
+                          style: Theme.of(context)
+                              .textTheme
+                              .headline5!
+                              .copyWith(fontSize: 16),
+                        ),
+                        TextButton(onPressed: () {}, child: const Text("")),
+                      ],
+                    ),
+                  ),
                   for (var map in availableMaps)
                     ListTile(
                       onTap: () {
-                        map.showMarker(coords: coords, title: title);
+                        map.showMarker(
+                          coords: coords,
+                          title: title,
+                        );
                         Navigator.of(context).pop();
                       },
                       title: Text(
                         map.mapName,
-                        style: Theme.of(context).textTheme.headline3!.copyWith(
-                            color:
-                                Theme.of(context).textTheme.headline4!.color),
+                        style: Theme.of(context)
+                            .textTheme
+                            .bodyText1!
+                            .copyWith(fontSize: 18),
                       ),
                       leading: SvgPicture.asset(
                         map.icon,
@@ -65,7 +102,9 @@ class MainModel extends ChangeNotifier {
                 isUserMessage: false, message: S.of(context).welcome_message));
       }
     }
-    Navigator.of(context).pushNamed(getIt.get<navigation.Chat>().route);
+    Navigator.of(context).pushNamed(
+      getIt.get<navigation.Chat>().route,
+    );
   }
 
   void openNewOrder(BuildContext context, User user) {

@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:math';
 
 import 'package:closet/core/domain/enums/order_enums.dart';
 import 'package:closet/core/domain/model/order.dart';
@@ -11,6 +12,7 @@ import 'package:file_picker/file_picker.dart';
 import 'package:flutter/cupertino.dart';
 
 class NewOrderModel extends ChangeNotifier {
+  late Random rnd;
   late int cost;
   final DbController controller;
   String? contractPath;
@@ -35,6 +37,7 @@ class NewOrderModel extends ChangeNotifier {
     required this.weekValue,
   }) {
     calculateCost();
+    rnd = Random();
   }
 
   void retailPeriodChanged(double value) {
@@ -78,13 +81,14 @@ class NewOrderModel extends ChangeNotifier {
   void makeOrder(BuildContext context, User user) async {
     List<Order> updatedOrders = user.orders ?? [];
     final Order newOrder = Order(
+        id: rnd.nextInt(10000),
         contractFileName: contractFileName,
         contractPath: contractPath,
         cost: cost,
         typeOrder: typeOrder,
         status: orderStatus.theOrderHasBeenPlaced,
         typeWarehouse: typeWarehouse,
-        sizeValue: sizeValue,
+        sizeValue: sizeValue.round(),
         weekValue: weekValue,
         typeDelivery: typeDelivery);
     updatedOrders.add(newOrder);
@@ -100,7 +104,7 @@ class NewOrderModel extends ChangeNotifier {
   }
 
   void calculateCost() {
-    cost = ((sizeValue * 294) + (weekValue * 56)).toInt();
+    cost = ((sizeValue.round() * 294) + (weekValue.round() * 56)).toInt();
     notifyListeners();
   }
 }

@@ -63,4 +63,21 @@ class OrdersModel extends ChangeNotifier {
         return S.of(context).box;
     }
   }
+
+  void openOrders(BuildContext context, User user) {
+    Navigator.of(context).pushNamedAndRemoveUntil(
+        getIt.get<navigation.Orders>().route, (Route<dynamic> route) => false,
+        arguments: user);
+  }
+
+  void openOrderDetails(
+      {required User user,
+      required Order order,
+      required int index,
+      required BuildContext context}) {
+    Navigator.of(context).pushNamedAndRemoveUntil(
+        getIt.get<navigation.OrderDetails>().route,
+        (Route<dynamic> route) => false,
+        arguments: {"user": user, "index": index, "order": order});
+  }
 }

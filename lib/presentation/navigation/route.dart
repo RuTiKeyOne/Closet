@@ -35,3 +35,15 @@ class NewOrder extends Route {
 class Orders extends Route {
   Orders() : super("Orders");
 }
+
+class OrderDetails extends Route {
+  OrderDetails() : super("OrderDetails");
+}
+
+class OpenBox extends Route {
+  OpenBox() : super("OpenBox");
+}
+
+class VideoSurveilance extends Route {
+  VideoSurveilance() : super("VideoSurveilance");
+}

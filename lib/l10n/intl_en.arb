@@ -58,6 +58,24 @@
     "things_in_stock" : "Things In Stock",
     "things_are_not_in_stock" : "Things are not stock",
     "the_order_has_been_placed" : "The order has been placed",
-    "order_completed" : "Order completed"
-
+    "order_completed" : "Order completed",
+    "what_is_included" : "What is included",
+    "box_rental" : "Box rental",
+    "castle" : "Castle",
+    "seal" : "Seal",
+    "security" : "Security",
+    "video_surveillance" : "Video surveillance",
+    "access_to_boxing_24_7" : "Access to boxing 24/7",
+    "status" : "Status",
+    "details" : "Details",
+    "open_box" : "Open box",
+    "change_status" : "Change status",
+    "contract" : "Contract",
+    "qr_code" : "QR code",
+    "bring_the_qr_code_to_the_box" : "Bring the QR code to the box",
+    "example_qr_code" : "Example QR code",
+    "camera_1" : "Camera 1",
+    "camera_2" : "Camera 2",
+    "chat_order" : "Chat order"
+ 
  }

@@ -22,22 +22,35 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "access_to_boxing_24_7":
+            MessageLookupByLibrary.simpleMessage("Доступ к боксу 24/7"),
         "account": MessageLookupByLibrary.simpleMessage("Аккаунт"),
         "add_contract":
             MessageLookupByLibrary.simpleMessage("Добавить договор"),
         "back": MessageLookupByLibrary.simpleMessage("Назад"),
         "base": MessageLookupByLibrary.simpleMessage("Базовый"),
         "box": MessageLookupByLibrary.simpleMessage("Бокс"),
+        "box_rental": MessageLookupByLibrary.simpleMessage("Аренда бокса"),
+        "bring_the_qr_code_to_the_box":
+            MessageLookupByLibrary.simpleMessage("Поднесите QR код к боксу"),
         "by_yourself": MessageLookupByLibrary.simpleMessage("Самостоятельно"),
+        "camera_1": MessageLookupByLibrary.simpleMessage("Камера 1"),
+        "camera_2": MessageLookupByLibrary.simpleMessage("Камера 2"),
+        "castle": MessageLookupByLibrary.simpleMessage("Замок"),
+        "change_status":
+            MessageLookupByLibrary.simpleMessage("Изменить статус"),
         "chat": MessageLookupByLibrary.simpleMessage("Чат"),
+        "chat_order": MessageLookupByLibrary.simpleMessage("Чат заказа"),
         "closet": MessageLookupByLibrary.simpleMessage("Чулан"),
         "container": MessageLookupByLibrary.simpleMessage("Контейнер"),
+        "contract": MessageLookupByLibrary.simpleMessage("Контракт"),
         "cost": MessageLookupByLibrary.simpleMessage("Стоймость"),
         "create": MessageLookupByLibrary.simpleMessage("Создать"),
         "create_an_account":
             MessageLookupByLibrary.simpleMessage("Создать учетную запись"),
         "delivery_to_the_warehouse":
             MessageLookupByLibrary.simpleMessage("Доставка на склад"),
+        "details": MessageLookupByLibrary.simpleMessage("Подробности"),
         "don_t_you_have_an_account":
             MessageLookupByLibrary.simpleMessage("У вас нет аккаунта?"),
         "edit": MessageLookupByLibrary.simpleMessage("Редактировать"),
@@ -48,6 +61,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Почта не может быть пустой."),
         "email_validator_message_2": MessageLookupByLibrary.simpleMessage(
             "Введите корректное значение почты."),
+        "example_qr_code":
+            MessageLookupByLibrary.simpleMessage("Пример QR кода"),
         "login": MessageLookupByLibrary.simpleMessage("Логин"),
         "login_or_password_is_incorrect":
             MessageLookupByLibrary.simpleMessage("Логин или пароль неверны."),
@@ -63,6 +78,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "new_1": MessageLookupByLibrary.simpleMessage("Новый"),
         "new_order": MessageLookupByLibrary.simpleMessage("Новый заказ"),
         "no": MessageLookupByLibrary.simpleMessage("Нет"),
+        "open_box": MessageLookupByLibrary.simpleMessage("Открыть бокс"),
         "or_sign_up_with":
             MessageLookupByLibrary.simpleMessage("Или войдите с помощью"),
         "order": MessageLookupByLibrary.simpleMessage("Заказ"),
@@ -73,9 +89,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "password_validator_message_1": MessageLookupByLibrary.simpleMessage(
             "Пароль не может быть пустым."),
         "profile": MessageLookupByLibrary.simpleMessage("Профиль"),
+        "qr_code": MessageLookupByLibrary.simpleMessage("QR код"),
         "rental_period": MessageLookupByLibrary.simpleMessage("Срок\nаренды"),
         "rub": MessageLookupByLibrary.simpleMessage("руб."),
         "save": MessageLookupByLibrary.simpleMessage("Сохранить"),
+        "seal": MessageLookupByLibrary.simpleMessage("Пломба"),
+        "security": MessageLookupByLibrary.simpleMessage("Охрана"),
         "sign_in": MessageLookupByLibrary.simpleMessage("Войти"),
         "sign_in_to_continue":
             MessageLookupByLibrary.simpleMessage("Войдите чтобы продолжить"),
@@ -83,6 +102,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "sign_up": MessageLookupByLibrary.simpleMessage("Регистрация"),
         "size": MessageLookupByLibrary.simpleMessage("Размер"),
         "staff": MessageLookupByLibrary.simpleMessage("Сотрудники"),
+        "status": MessageLookupByLibrary.simpleMessage("Статус"),
         "support_chat": MessageLookupByLibrary.simpleMessage("Чат поддержки"),
         "tariff": MessageLookupByLibrary.simpleMessage("Тариф"),
         "telephone": MessageLookupByLibrary.simpleMessage("Телефон"),
@@ -99,10 +119,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "to_order": MessageLookupByLibrary.simpleMessage("Заказать"),
         "type_of_delivery_to_the_warehouse":
             MessageLookupByLibrary.simpleMessage("Тип\nдоставки\nна склад"),
+        "video_surveillance":
+            MessageLookupByLibrary.simpleMessage("Видеонаблюдение"),
         "warehouse": MessageLookupByLibrary.simpleMessage("Склад"),
         "week": MessageLookupByLibrary.simpleMessage("Недель(ля)(ли)"),
         "welcome": MessageLookupByLibrary.simpleMessage("Добро пожаловать"),
         "welcome_message": MessageLookupByLibrary.simpleMessage(
-            "Добрый день, вы можете задать свои вопросы тут.")
+            "Добрый день, вы можете задать свои вопросы тут."),
+        "what_is_included": MessageLookupByLibrary.simpleMessage("Что включено")
       };
 }

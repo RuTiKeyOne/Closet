@@ -58,7 +58,40 @@
     "things_in_stock" : "Вещи на складе",
     "things_are_not_in_stock" : "Вещи не на складе",
     "the_order_has_been_placed" : "Заказ размещен",
-    "order_completed" : "Заказ завершен"
+    "order_completed" : "Заказ завершен",
+    "what_is_included" : "Что включено",
+    "box_rental" : "Аренда бокса",
+    "castle" : "Замок",
+    "seal" : "Пломба",
+    "security" : "Охрана",
+    "video_surveillance" : "Видеонаблюдение",
+    "access_to_boxing_24_7" : "Доступ к боксу 24/7",
+    "status" : "Статус",
+    "details" : "Подробности",
+    "open_box" : "Открыть бокс",
+    "change_status" : "Изменить статус",
+    "contract" : "Контракт",
+    "qr_code" : "QR код",
+    "bring_the_qr_code_to_the_box" : "Поднесите QR код к боксу",
+    "example_qr_code" : "Пример QR кода",
+    "camera_1" : "Камера 1",
+    "camera_2" : "Камера 2",
+    "chat_order" : "Чат заказа"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -4,6 +4,7 @@ import 'package:closet/core/inherit/chat_model.dart';
 import 'package:closet/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:closet/presentation/navigation/route.dart' as navigator;
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 import 'package:closet/core/BLoC/cubit/chat_cubit/chat_cubit.dart' as cubit;

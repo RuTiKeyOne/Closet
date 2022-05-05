@@ -3,12 +3,15 @@ import 'package:closet/core/BLoC/cubit/chat_cubit/chat_cubit.dart';
 import 'package:closet/core/BLoC/cubit/edit_cubit/edit_cubit.dart';
 import 'package:closet/core/BLoC/cubit/new_order/new_order_cubit.dart';
 import 'package:closet/core/BLoC/cubit/registration_cubit/registration_cubit.dart';
+import 'package:closet/core/BLoC/cubit/video_survailance/video_surveilance_cubit.dart'
+    as videoCubit;
 import 'package:closet/core/data/db/user_db_impl.dart';
 import 'package:closet/core/data/repository/db_repository_impl.dart';
 import 'package:closet/core/domain/model/order.dart';
 import 'package:closet/core/domain/repository/db_repository.dart';
 import 'package:closet/core/internal/db_di/db_controller.dart';
 import 'package:closet/presentation/navigation/route.dart';
+import 'package:closet/presentation/video_surveillance/video_surveilance_view.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get_it/get_it.dart';
 
@@ -23,6 +26,9 @@ Future<void> setup() async {
   getIt.registerLazySingleton<Chat>(() => Chat());
   getIt.registerLazySingleton<NewOrder>(() => NewOrder());
   getIt.registerLazySingleton<Orders>(() => Orders());
+  getIt.registerLazySingleton<OrderDetails>(() => OrderDetails());
+  getIt.registerLazySingleton<OpenBox>(() => OpenBox());
+  getIt.registerLazySingleton<VideoSurveilance>(() => VideoSurveilance());
 
   getIt
       .registerLazySingleton<UserDatabaseImpl>(() => UserDatabaseImpl.instance);
@@ -44,6 +50,9 @@ Future<void> setup() async {
   ));
   getIt.registerSingleton<ChatCubit>(ChatCubit(ChatView()));
   getIt.registerSingleton<NewOrderCubit>(NewOrderCubit(NewOrderView()));
+  getIt.registerSingleton<videoCubit.VideoSurveilanceCubit>(
+      videoCubit.VideoSurveilanceCubit(
+          videoCubit.VideoSurveilanceView()..initVideoController()));
 }
 
 Future<void> precachePictures() async {
@@ -106,6 +115,31 @@ Future<void> precachePictures() async {
     precachePicture(
       ExactAssetPicture(
           SvgPicture.svgStringDecoderBuilder, 'assets/icons/new_order.svg'),
+      null,
+    ),
+    precachePicture(
+      ExactAssetPicture(
+          SvgPicture.svgStringDecoderBuilder, 'assets/icons/cctv.svg'),
+      null,
+    ),
+    precachePicture(
+      ExactAssetPicture(
+          SvgPicture.svgStringDecoderBuilder, 'assets/icons/open-lock.svg'),
+      null,
+    ),
+    precachePicture(
+      ExactAssetPicture(
+          SvgPicture.svgStringDecoderBuilder, 'assets/icons/stock.svg'),
+      null,
+    ),
+    precachePicture(
+      ExactAssetPicture(
+          SvgPicture.svgStringDecoderBuilder, 'assets/icons/completed.svg'),
+      null,
+    ),
+    precachePicture(
+      ExactAssetPicture(
+          SvgPicture.svgStringDecoderBuilder, 'assets/icons/not.svg'),
       null,
     ),
   ]);

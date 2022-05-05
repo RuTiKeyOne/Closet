@@ -1,17 +1,19 @@
 import 'package:closet/core/domain/enums/order_enums.dart';
 
 class Order {
+  final int id;
   final int cost;
   final orderType typeOrder;
-  final orderStatus status;
+  orderStatus status;
   final String? contractPath;
   final String? contractFileName;
   final warehouseType typeWarehouse;
-  final double sizeValue;
+  final int sizeValue;
   final double weekValue;
   final typeOfDeliveryToTheWarehouse typeDelivery;
 
   Order({
+    required this.id,
     required this.cost,
     required this.typeOrder,
     required this.status,
@@ -28,6 +30,7 @@ class Order {
     if (identical(this, other)) return true;
 
     return other is Order &&
+        other.id == id &&
         other.cost == cost &&
         other.typeOrder == typeOrder &&
         other.status == status &&
@@ -41,7 +44,8 @@ class Order {
 
   @override
   int get hashCode {
-    return cost.hashCode ^
+    return id.hashCode ^
+        cost.hashCode ^
         typeOrder.hashCode ^
         status.hashCode ^
         contractPath.hashCode ^
@@ -53,17 +57,19 @@ class Order {
   }
 
   Order copyWith({
+    int? id,
     int? cost,
     orderType? typeOrder,
     orderStatus? status,
     String? contractPath,
     String? contractFileName,
     warehouseType? typeWarehouse,
-    double? sizeValue,
+    int? sizeValue,
     double? weekValue,
     typeOfDeliveryToTheWarehouse? typeDelivery,
   }) {
     return Order(
+      id: id ?? this.id,
       cost: cost ?? this.cost,
       typeOrder: typeOrder ?? this.typeOrder,
       status: status ?? this.status,
