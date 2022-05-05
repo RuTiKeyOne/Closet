@@ -95,7 +95,7 @@ class ProfileView extends StatelessWidget {
                           ),
                           const SizedBox(width: 20, height: 20),
                           Text(
-                            user.password,
+                            user.password.replaceAll(RegExp(r"."), "*"),
                             style: Theme.of(context).textTheme.headline5!,
                             overflow: TextOverflow.ellipsis,
                           ),
