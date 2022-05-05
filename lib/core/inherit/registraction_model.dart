@@ -24,12 +24,12 @@ class RegistrationModel extends ChangeNotifier {
   TextEditingController loginController;
 
   String _password;
-  String get password => _login;
+  String get password => _password;
   set password(String val) => {
         _password = val,
-        passwordController.text = _login,
+        passwordController.text = _password,
         passwordController.selection = TextSelection.fromPosition(
-            TextPosition(offset: loginController.text.length)),
+            TextPosition(offset: passwordController.text.length)),
       };
 
   TextEditingController passwordController;
