@@ -5,15 +5,21 @@ The mobile application is a prototype of the warehouse service, where you can or
 ## Screenshots
 
 <p align="center">
-<img src="https://github.com/RuTiKeyOne/Weather/blob/main/doc/screenshots/1.png" width="250"/>
-<img src="https://github.com/RuTiKeyOne/Weather/blob/main/doc/screenshots/2.png" width="250"/>
-<img src="https://github.com/RuTiKeyOne/Weather/blob/main/doc/screenshots/3.png" width="250"/>
+<img src="https://github.com/RuTiKeyOne/Closet/blob/master/doc/screenshots/1.jpg" width="225"/>
+<img src="https://github.com/RuTiKeyOne/Closet/blob/master/doc/screenshots/2.jpg" width="225"/>
+<img src="https://github.com/RuTiKeyOne/Closet/blob/master/doc/screenshots/3.jpg" width="225"/>
 </p>
 
 <p align="center">
-<img src="https://github.com/RuTiKeyOne/Weather/blob/main/doc/screenshots/4.png" width="250"/>
-<img src="https://github.com/RuTiKeyOne/Weather/blob/main/doc/screenshots/5.png" width="250"/>
-<img src="https://github.com/RuTiKeyOne/Weather/blob/main/doc/screenshots/6.png" width="250"/>
+<img src="https://github.com/RuTiKeyOne/Closet/blob/master/doc/screenshots/4.jpg" width="225"/>
+<img src="https://github.com/RuTiKeyOne/Closet/blob/master/doc/screenshots/5.jpg" width="225"/>
+<img src="https://github.com/RuTiKeyOne/Closet/blob/master/doc/screenshots/6.jpg" width="225"/>
+</p>
+                                                                                            
+<p align="center">
+<img src="https://github.com/RuTiKeyOne/Closet/blob/master/doc/screenshots/7.jpg" width="225"/>
+<img src="https://github.com/RuTiKeyOne/Closet/blob/master/doc/screenshots/8.jpg" width="225"/>
+<img src="https://github.com/RuTiKeyOne/Closet/blob/master/doc/screenshots/9.jpg" width="225"/>
 </p>
 
 ## Video
