@@ -23,7 +23,7 @@ The mobile application is a prototype of the warehouse service, where you can or
 </p>
 
 ## Video
-[![Watch the video](https://github.com/RuTiKeyOne/Weather/blob/main/doc/screenshots/videoscreenshot.PNG)](https://www.youtube.com/watch?v=KiHpRrw5ynY)
+[![Watch the video](https://github.com/RuTiKeyOne/Closet/blob/master/doc/screenshots/videoscreenshot.PNG)](https://www.youtube.com/watch?v=KiHpRrw5ynY)
 
 
 ## What functionality does the application provide to the user?
